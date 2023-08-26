@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap');
+
+body,
+h1,
+h2,
+h3,
+p,
+ul {
+    font-family: 'Rubik';
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    background: #9999AA;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.topbar {
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    height: 4.5rem;
+    z-index: 1000;
+}
+
+.title {
+    text-align: center;
+    color: #57a773;
+    font-weight: 700;
+    font-size: 2.2rem;
+    position: relative;
+}
+
+.title::before,
+.title::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 2px;
+    background-color: #57a773;
+    transform: translateX(-50%) scaleX(0);
+    transition: transform 0.3s ease-in-out;
+}
+
+.title.active::before,
+.title.active::after {
+    transform: translateX(-50%) scaleX(1);
+}
+
+
+.buttons-user {
+    align-self: flex-end;
+    position: absolute;
+    bottom: 50%;
+    transform: translateY(50%);
+    padding: 10px 30px;
+    right: 0;
+}
+
+.btn-contact {
+    text-decoration: none;
+}
+
+.btn-contact:hover {
+    color: #57a773;
+    transform: scale(1.04);
+}
+
+.btn-full {
+    font-size: 1.2rem;
+    color: #fff;
+    padding: 1.2rem 1.8rem;
+    border-radius: 10px;
+    font-weight: 600;
+    background-color: #333;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.content-container {
+    display: flex;
+    flex: 1;
+}
+
+.sidebar {
+    background-color: #333;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    height: 100%;
+    justify-content: center;
+}
+
+.sidebar-toggle {
+    font-size: 1.2rem;
+    border: none;
+    outline: none;
+}
+
+.container-socials i {
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    font-size: 4.5rem;
+}
+
+.container-socials i:hover {
+    color: #57a773;
+    transform: scale(1.04);
+}
+
+.main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    margin-left: 20%;
+}
+
+.card-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.card {
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 80%;
+    max-width: 600px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: #333;
+}
+
+.card i {
+    color: #888888;
+}
+
+.card:hover {
+    color: #57a773;
+    transform: scale(1.04);
+
+}
+
+.card:hover i {
+    color: rgb(255, 255, 102);
+    transform: scale(1.04);
+    transition: color 0.3s ease;
+    /* Add */
+}
+
+.footer {
+    background-color: #f0f0f0;
+    text-align: center;
+    padding: 10px 0;
+    color: #555;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-weight: 700;
+}
+
+.footer-content p {
+    margin-bottom: 10px;
+}
+
+@media (max-width: 1099px) {
+    body {
+        font-size: 14px;
+    }
+
+    .topbar {
+        width: 100%;
+        padding: 10px;
+        justify-content: start;
+    }
+
+    .title {
+        font-size: 1.2rem;
+    }
+
+    .container {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: 10%;
+        display: flex;
+        margin-top: 92px;
+        top: 0;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .container-socials {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+    }
+
+    .main-content {
+        width: 100%;
+        margin: 0;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    .card-container {
+        width: 100%;
+    }
+
+    .footer {
+        width: 100%;
+    }
+}
