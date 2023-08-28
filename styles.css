@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap');
 
+:root {
+    --color-secundario: rgba(220, 61, 61, 0.711);
+}
+
 body,
 h1,
 h2,
@@ -14,14 +18,13 @@ ul {
 html,
 body {
     height: 100%;
-    width: 100%;
-    background: #9999AA;
+    background: rgba(255, 255, 255, 0.5);
 }
 
 .container {
     display: flex;
-    flex-direction: column;
     height: 100%;
+    margin-left: 250px;
 }
 
 .topbar {
@@ -37,9 +40,7 @@ body {
 }
 
 .title {
-    text-align: center;
-    color: #57a773;
-    font-weight: 700;
+    color: var(--color-secundario);
     font-size: 2.2rem;
     position: relative;
 }
@@ -53,7 +54,7 @@ body {
     transform: translateX(-50%);
     width: 50px;
     height: 2px;
-    background-color: #57a773;
+    background-color: var(--color-secundario);
     transform: translateX(-50%) scaleX(0);
     transition: transform 0.3s ease-in-out;
 }
@@ -63,35 +64,29 @@ body {
     transform: translateX(-50%) scaleX(1);
 }
 
-
 .buttons-user {
-    align-self: flex-end;
-    position: absolute;
-    bottom: 50%;
-    transform: translateY(50%);
-    padding: 10px 30px;
-    right: 0;
-}
-
-.btn-contact {
-    text-decoration: none;
-}
-
-.btn-contact:hover {
-    color: #57a773;
-    transform: scale(1.04);
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    gap: 1rem;
 }
 
 .btn-full {
-    font-size: 1.2rem;
-    color: #fff;
+    color: #333;
     padding: 1.2rem 1.8rem;
     border-radius: 10px;
     font-weight: 600;
-    background-color: #333;
+    background-color: #fff;
+    text-align: center;
     border: none;
     outline: none;
     cursor: pointer;
+    text-decoration: none;
+}
+
+.btn-full:hover {
+    color: var(--color-secundario);
+    transform: scale(1.04);
 }
 
 .content-container {
@@ -109,38 +104,35 @@ body {
     justify-content: center;
 }
 
-.sidebar-toggle {
-    font-size: 1.2rem;
-    border: none;
-    outline: none;
+.container-socials {
+    display: flex;
+    gap: 8px;
+    position: absolute;
+    bottom: 50%;
+    transform: translateY(50%);
+    padding: 10px 30px;
+    right: 0;
 }
 
 .container-socials i {
-    color: #fff;
-    display: flex;
-    justify-content: center;
-    font-size: 4.5rem;
+    color: #333;
+    font-size: 3.5rem;
 }
 
 .container-socials i:hover {
-    color: #57a773;
+    color: var(--color-secundario);
     transform: scale(1.04);
 }
 
 .main-content {
-    flex: 1;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 80%;
-    margin-left: 20%;
+    width: 100%;
 }
 
 .card-container {
     display: flex;
-    flex-direction: row;
-    align-items: center;
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
@@ -154,7 +146,6 @@ body {
     width: 80%;
     max-width: 600px;
     display: flex;
-    align-items: center;
     gap: 10px;
     text-decoration: none;
     color: #333;
@@ -165,7 +156,7 @@ body {
 }
 
 .card:hover {
-    color: #57a773;
+    color: var(--color-secundario);
     transform: scale(1.04);
 
 }
@@ -174,7 +165,6 @@ body {
     color: rgb(255, 255, 102);
     transform: scale(1.04);
     transition: color 0.3s ease;
-    /* Add */
 }
 
 .footer {
@@ -193,23 +183,17 @@ body {
 }
 
 @media (max-width: 1099px) {
-    body {
-        font-size: 14px;
-    }
-
     .topbar {
-        width: 100%;
         padding: 10px;
         justify-content: start;
     }
 
     .title {
-        font-size: 1.2rem;
+        font-size: 1.8rem;
     }
 
     .container {
-        width: 100%;
-        flex-direction: column;
+        margin: 0;
     }
 
     .sidebar {
@@ -217,31 +201,23 @@ body {
         height: 10%;
         display: flex;
         margin-top: 92px;
-        top: 0;
-        align-items: center;
-        justify-content: center;
+    }
+
+    .buttons-user {
+        flex-direction: row;
     }
 
     .container-socials {
-        display: flex;
-        flex-direction: row;
         gap: 1rem;
     }
+}
 
-    .main-content {
-        width: 100%;
-        margin: 0;
+@media (max-width: 620px) {
+    .btn-full {
+        font-size: 0.6rem;
     }
 
-    .card {
-        width: 100%;
-    }
-
-    .card-container {
-        width: 100%;
-    }
-
-    .footer {
-        width: 100%;
+    .container-socials i {
+        font-size: 3rem;
     }
 }
