@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap');
 
+:root {
+    --color-secundario: rgba(220, 61, 61, 0.711);
+}
+
 body,
 h1,
 h2,
@@ -15,7 +19,7 @@ html,
 body {
     height: 100%;
     width: 100%;
-    background: #9999AA;
+    background: rgba(255, 255, 255, 0.5);
 }
 
 .container {
@@ -38,7 +42,7 @@ body {
 
 .title {
     text-align: center;
-    color: #57a773;
+    color: var(--color-secundario);
     font-weight: 700;
     font-size: 2.2rem;
     position: relative;
@@ -53,7 +57,7 @@ body {
     transform: translateX(-50%);
     width: 50px;
     height: 2px;
-    background-color: #57a773;
+    background-color: var(--color-secundario);
     transform: translateX(-50%) scaleX(0);
     transition: transform 0.3s ease-in-out;
 }
@@ -63,16 +67,6 @@ body {
     transform: translateX(-50%) scaleX(1);
 }
 
-
-/* .buttons-user {
-    align-self: flex-end;
-    position: absolute;
-    bottom: 50%;
-    transform: translateY(50%);
-    padding: 10px 30px;
-    right: 0;
-} */
-
 .buttons-user {
     display: flex;
     flex-direction: column;
@@ -80,15 +74,6 @@ body {
     gap: 1rem;
     /* align-items: center; */
 }
-
-/* .btn-contact {
-    text-decoration: none;
-}
-
-.btn-contact:hover {
-    color: #57a773;
-    transform: scale(1.04);
-} */
 
 .btn-full {
     font-size: 1rem;
@@ -105,7 +90,7 @@ body {
 }
 
 .btn-full:hover {
-    color: #57a773;
+    color: var(--color-secundario);
     transform: scale(1.04);
 }
 
@@ -148,7 +133,7 @@ body {
 }
 
 .container-socials i:hover {
-    color: #57a773;
+    color: var(--color-secundario);
     transform: scale(1.04);
 }
 
@@ -159,7 +144,6 @@ body {
     justify-content: center;
     align-items: center;
     width: 100%;
-    /* margin-left: 20%; */
 }
 
 .card-container {
@@ -190,7 +174,7 @@ body {
 }
 
 .card:hover {
-    color: #57a773;
+    color: var(--color-secundario);
     transform: scale(1.04);
 
 }
@@ -218,18 +202,13 @@ body {
 }
 
 @media (max-width: 1099px) {
-    body {
-        font-size: 14px;
-    }
-
     .topbar {
-        width: 100%;
         padding: 10px;
         justify-content: start;
     }
 
     .title {
-        font-size: 1.2rem;
+        font-size: 1.8rem;
     }
 
     .container {
@@ -241,38 +220,14 @@ body {
         height: 10%;
         display: flex;
         margin-top: 92px;
-        top: 0;
-        align-items: center;
-        justify-content: center;
     }
 
     .buttons-user {
-        display: flex;
         flex-direction: row;
     }
 
     .container-socials {
-        display: flex;
-        flex-direction: row;
         gap: 1rem;
-    }
-
-    .main-content {
-        width: 100%;
-        margin: 0;
-    }
-
-    .card {
-        width: 100%;
-    }
-
-    .card-container {
-        width: 100%;
-        max-width: 80%;
-    }
-
-    .footer {
-        width: 100%;
     }
 }
 
