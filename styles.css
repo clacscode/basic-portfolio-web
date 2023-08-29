@@ -221,3 +221,37 @@ body {
         font-size: 3rem;
     }
 }
+
+@media (min-width: 375px) {
+    .title {
+        font-size: 1.3rem;    
+    }
+
+    .btn-full {
+        padding: 0.8rem 1.2rem; 
+        border-radius: 8px;
+    }
+
+    .container-socials i {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 320px) {
+    .title {
+        font-size: 0.9rem;    
+    }
+
+    .btn-full {
+        padding: 0.4rem 0.7rem; 
+        border-radius: 6px;
+    }
+
+    .card {
+        font-size: 13px;
+    }
+
+    .container-socials i {
+        font-size: 2rem;
+    }
+}
