@@ -131,8 +131,20 @@ body {
     width: 100%;
 }
 
-.card-container {
+#profile-item {
     display: flex;
+}
+
+#content-item {
+    display: none;
+}
+
+#project-item {
+    display: none;
+}
+
+.card-container {
+    /* display: flex; */
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;

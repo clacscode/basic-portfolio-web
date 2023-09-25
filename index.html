@@ -27,16 +27,19 @@
     <aside class="sidebar">
         <!-- <button class="sidebar-toggle" onclick="toggleSidebar()"><i class="fa-solid fa-bars"></i></button> -->
         <div class="buttons-user">
-            <a href="#" class="btn-full">Perfil</a>
-            <a href="#" class="btn-full">Contenido</a>
-            <a href="#" class="btn-full">Proyectos</a>
+            <a href="#" id="profile" class="btn-full">Perfil</a>
+            <a href="#" id="content" class="btn-full">Contenido</a>
+            <a href="#" id="project" class="btn-full">Proyectos</a>
             <a href="mailto:clacscodes@gmail.com" class="btn-full">Contacto</a>
         </div>
     </aside>
 
     <div class="container">
         <main class="main-content">
-            <div class="card-container">
+            <div id="profile-item" class="card-container">
+                <h1 class="card">Perfil</h1>
+            </div>
+            <div id="content-item" class="card-container">
                 <a href="https://github.com/clacscode/git-basico" class="card">
                     <i class="fas fa-lightbulb"></i>
                     Git básico
@@ -53,6 +56,9 @@
                     <i class="fas fa-lightbulb"></i>
                     Recursividad <p style="color: red;">| Próximamente</p>
                 </a>
+            </div>
+            <div id="project-item" class="card-container">
+                <h1 class="card">Proyectos</h1>
             </div>
         </main>
     </div>
