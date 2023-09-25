@@ -132,11 +132,11 @@ body {
 }
 
 #profile-item {
-    display: flex;
+    display: none;
 }
 
 #content-item {
-    display: none;
+    display: flex;
 }
 
 #project-item {
