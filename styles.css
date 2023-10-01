@@ -42,7 +42,7 @@ body {
 .title {
     color: var(--color-secundario);
     font-size: 2.2rem;
-    /* position: relative; */
+    position: relative;
 }
 
 .title::before,
@@ -266,6 +266,7 @@ body {
 @media (max-width: 540px) {
     .title {
         font-size: 0.5rm;
+        position: relative;
     }
 
     .card-container {
