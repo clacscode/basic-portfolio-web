@@ -251,17 +251,6 @@ body {
     }
 }
 
-/* @media (min-width: 1024px) {
-    .sidebar {
-        height: 15%;
-    }
-
-    .main-content {
-        position: absolute;
-        top: 14rem;
-    }
-} */
-
 @media (max-width: 620px) {
     .btn-full {
         font-size: 0.6rem;
@@ -315,5 +304,19 @@ body {
 
     #profile-item {
         font-size: 0.65rem;
+    }
+}
+
+@media (max-width: 375px) {
+    .title {
+        font-size: 1rm;
+    }
+    
+    .card-container {
+        margin-top: 30%;
+    }
+
+    #profile-item {
+        font-size: 0.68rem;
     }
 }
