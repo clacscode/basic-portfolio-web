@@ -42,7 +42,7 @@ body {
 .title {
     color: var(--color-secundario);
     font-size: 2.2rem;
-    position: relative;
+    /* position: relative; */
 }
 
 .title::before,
@@ -133,7 +133,6 @@ body {
 
 .title-full {
     flex-wrap: wrap;
-    gap: 20px;
     justify-content: center;
 
     align-self: center;
@@ -146,7 +145,6 @@ body {
     display: flex;
     gap: 10px;
     text-decoration: none;
-    color: #333;
 }
 
 #profile-item {
@@ -265,6 +263,20 @@ body {
     }
 }
 
+@media (max-width: 540px) {
+    .title {
+        font-size: 0.5rm;
+    }
+
+    .card-container {
+        margin-top: 10%;
+    }
+
+    #profile-item {
+        font-size: 0.68rem;
+    }
+}
+
 @media (max-width: 425px) {
     .title {
         font-size: 1.2rem;
@@ -284,7 +296,44 @@ body {
     }
 }
 
-@media (max-width: 360px) {
+@media screen and (max-width: 414px) {
+    body {
+        height: auto;
+    }
+
+    .profile {
+        line-height: 1rem;
+        font-size: small;
+    }
+
+    .card-container {
+        margin-top: 50%;
+        position: static;
+        margin-bottom: 20%;
+    }
+}
+
+@media (max-width: 375px) {
+    .title {
+        font-size: 1rm;
+    }
+
+    .card-container {
+        margin-top: 50%;
+        position: static;
+        margin-bottom: 20%;
+    }
+
+    #profile-item {
+        font-size: 0.68rem;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    body {
+        height: auto;
+    }
+
     .title {
         font-size: 0.9rem;
     }
@@ -298,6 +347,12 @@ body {
         font-size: 13px;
     }
 
+    .card-container {
+        margin-top: 50%;
+        position: static;
+        margin-bottom: 20%;
+    }
+
     .container-socials i {
         font-size: 2rem;
     }
@@ -307,16 +362,19 @@ body {
     }
 }
 
-@media (max-width: 375px) {
-    .title {
-        font-size: 1rm;
-    }
-    
-    .card-container {
-        margin-top: 30%;
+@media screen and (max-width: 320px) {
+    body {
+        height: auto;
     }
 
-    #profile-item {
-        font-size: 0.68rem;
+    .profile {
+        line-height: 1rem;
+        font-size: small;
+    }
+
+    .card-container {
+        margin-top: 50%;
+        position: static;
+        margin-bottom: 20%;
     }
 }
